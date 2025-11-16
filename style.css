@@ -16,15 +16,13 @@
     --container-height : 100vh;
 }
 .mainContainer{
-    border: 1px solid red;
     height: var(--container-height);
     width: 70vw;
     margin: auto;
-    object-fit: cover;
+    display: flex;
 }
 .imageContainer{
     position: relative;
-    border: 1px solid ;
     height: var(--container-height) ;
     width: 30vw;
     background-image: url(./image/halie-west-25xggax4bSA-unsplash.jpg);
@@ -36,7 +34,7 @@
 .logoContainer{
     color: white;
     background-color: rgb(0, 0, 0,0.3);
-    backdrop-filter: blur(3px);
+    backdrop-filter: blur(2px);
     height: 30vh;
     display: flex;
     justify-content: space-around;
@@ -64,12 +62,96 @@ h5{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color:#fff;
     position: absolute;
-    bottom: 15px;
+    bottom: 40px;
     left: 5px;
     right: 5px;
     font-size: 0.8rem;
+    
 }
-span{
+.credit{
     text-decoration: underline;
 }
 /* image container */
+.formContainer{
+    background-color: #f9fafb;
+    height: var(--container-height);
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.formbox{
+    height: 80vh;
+}
+.form{
+    height: 40vh;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgb(0, 0, 0,0.3) ;
+}
+.introBox,.submitBox,.form{
+    padding: 20px;
+}
+.introBox{
+    height: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50px;
+}
+.submitBox{
+    height: 15vh;
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+h2{
+    margin-left: 50px;
+}
+.introText{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:  clamp(0.6rem, 2.2vh, 1.4rem);
+    font-weight: 600;
+    line-height: 1.6rem;
+    margin-bottom: 10px;
+}
+
+.form-row{
+    display: flex;
+    justify-content:space-evenly;
+    gap: 30px;
+    margin: 1.6em;
+}
+label{
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+}
+input{
+    height: 4vh;
+    width: 15vw;
+    font-family:monospace;
+    border-radius: 10px;
+    border: 0.1px solid #E5E7EB;
+}
+#submitBtn{
+    height: 5vh;
+    width: 10vw;
+    border: none;
+    border-radius: 10px;
+    background-color: #596d48;
+    color: #fff;
+    font-weight: 600;
+    box-shadow: 0px 4px 8px rgb(0, 0, 0,0.4);
+}
+#submitBtn:hover{
+    height:6vh;
+    width:11vw ;
+}
+.form-group input:invalid{
+    border-color: red;
+}
+.form-group input:focus{
+    border-color: #1a73e8;
+}
